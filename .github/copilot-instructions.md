@@ -29,7 +29,7 @@ EnCho is a repository currently in its early stages. This file provides guidance
 
 ## Best Practices
 
-- **Security**: Never commit secrets, API keys, or sensitive information
+- **Security**: Never commit secrets, API keys, or sensitive information. Use environment variables and `.gitignore` patterns to protect sensitive data
 - **Dependencies**: Only add dependencies when necessary and ensure they are well-maintained
 - **Compatibility**: Consider backward compatibility when making changes
 - **Performance**: Be mindful of performance implications in your code
