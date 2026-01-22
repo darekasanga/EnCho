@@ -3,38 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EnCho 運用ダッシュボード</title>
+    <title>SenSei トップページ | EnCho 認証ポータル</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="layer header-layer">
-      <div class="header-title">
-        <div class="status-pill">本番環境</div>
-        <h1>EnCho 運用ダッシュボード</h1>
-        <p class="subtitle">バージョン: 2.4.1 / ログインユーザー: 佐藤みゆき（法人管理者）</p>
-      </div>
-      <nav class="header-actions">
-        <button type="button">トップページ</button>
-        <button type="button">ログアウト</button>
-      </nav>
-    </header>
-
-    <main>
-      <section class="layer auth-layer">
-        <div class="auth-summary">
-          <div>
-            <h2>ログイン</h2>
-            <p class="subtitle">SenSei/EnCho共通アカウントで本番環境に接続します。</p>
-          </div>
-          <div class="badge-row">
-            <span class="badge">SAML/ID連携</span>
-            <span class="badge">二要素認証</span>
-          </div>
+    <header class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">SenSei トップページ</span>
+        <h1>SenSei / EnCho 認証ポータル</h1>
+        <p class="subtitle">
+          ログイン、認証コード生成、ログインID登録をまとめたSenSeiの入口です。EnChoも同じ
+          認証基盤でログインできます。
+        </p>
+        <div class="hero-badges">
+          <span class="badge">SAML/SSO</span>
+          <span class="badge">二要素認証</span>
+          <span class="badge">管理者承認</span>
         </div>
-        <form class="auth-form">
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div>
+            <p class="label">ログイン先</p>
+            <h2>EnCho</h2>
+          </div>
+          <span class="status">現在: 稼働中</span>
+        </div>
+        <form class="login-form">
           <label>
-            <span>ユーザーID</span>
-            <input type="text" name="userId" placeholder="employee@example.jp" />
+            <span>ログインID</span>
+            <input type="text" name="loginId" placeholder="encho-admin" />
           </label>
           <label>
             <span>パスワード</span>
@@ -44,153 +42,83 @@
             <span>認証コード</span>
             <input type="text" name="otp" placeholder="000000" />
           </label>
-          <button class="primary" type="button">本番環境へログイン</button>
+          <button class="primary" type="button">EnChoにログイン</button>
         </form>
-        <p class="note">ログインフローは既存のSenSei/EnChoと同様の仕組みで構成しています。</p>
-      </section>
-
-      <section class="layer middle-layer">
-        <h2>ミドルレイヤー</h2>
-        <div class="middle-panels">
-          <div class="panel">
-            <h3>園</h3>
-            <div class="button-group">
-              <button type="button">園A</button>
-              <button type="button">園B</button>
-              <button type="button">園C</button>
-            </div>
-          </div>
-          <div class="panel">
-            <h3>クラス</h3>
-            <div class="button-group">
-              <button type="button">さくら組</button>
-              <button type="button">ひまわり組</button>
-              <button type="button">にじ組</button>
-            </div>
-          </div>
-          <div class="panel">
-            <h3>追加タブ</h3>
-            <div class="button-group">
-              <button type="button">追加</button>
-              <button type="button">削除</button>
-            </div>
-            <div class="window">
-              <p>追加・削除ウィンドウ（園・クラス・園児の紐付け）</p>
-            </div>
-          </div>
+        <div class="helper-links">
+          <button type="button" class="ghost">SenSeiに切替</button>
+          <button type="button" class="ghost">ログインサポート</button>
         </div>
-      </section>
+      </div>
+    </header>
 
-      <section class="layer child-layer">
-        <h2>園児レイヤー</h2>
-        <div class="button-group">
-          <button type="button">園児一覧</button>
-          <button type="button">出席状況</button>
-          <button type="button">個別履歴</button>
-        </div>
-      </section>
-
-      <section class="layer manual-layer">
-        <h2>マニュアル次元</h2>
-        <div class="manual-frame">
-          <iframe title="EnCho マニュアル" src="about:blank"></iframe>
-        </div>
-        <p class="note">マニュアルはインラインフレームで表示されます。</p>
-      </section>
-
-      <section class="layer controller-layer">
-        <h2>機能コントローラー</h2>
-        <div class="controller-grid">
-          <button type="button">日次表示</button>
-          <button type="button">サマリー表示</button>
-          <button type="button">保存</button>
-          <button type="button">データ読込み（CSV）</button>
-          <button type="button">データ読込み（履歴）</button>
-          <button type="button">データ読込み（テスト）</button>
-          <button type="button">区分変更</button>
-          <button type="button">印刷</button>
-          <button type="button">メモ（手書き）</button>
-          <button type="button">メモ（文字）</button>
-          <button type="button">ログウィンドウ</button>
-          <button type="button">設定</button>
-          <button type="button">ノード管理</button>
-        </div>
-      </section>
-
-      <section class="layer layout-layer">
-        <h2>計算方法・明細・サマリー（EnCho準拠）</h2>
-        <div class="layout-grid">
-          <div class="panel">
-            <h3>基本的計算方法</h3>
-            <ol>
-              <li>登園・降園の打刻差分を日次計算し、延長・早退を分類。</li>
-              <li>月次の在園日数と出欠をサマリーに集計。</li>
-              <li>区分変更・加算は履歴テーブルから再計算。</li>
-            </ol>
-            <p class="note">タグ → ボタン遷移はEnChoの導線に準拠（タブ選択後に操作ボタンが切替）。</p>
+    <main>
+      <section class="portal-grid">
+        <article class="card">
+          <div class="card-header">
+            <h2>ログイン</h2>
+            <span class="tag">EnCho対応</span>
           </div>
-          <div class="panel">
-            <h3>日次明細</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>園児名</th>
-                  <th>登園</th>
-                  <th>降園</th>
-                  <th>延長</th>
-                  <th>区分</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>高橋 そら</td>
-                  <td>08:35</td>
-                  <td>17:10</td>
-                  <td>+20分</td>
-                  <td>標準</td>
-                </tr>
-                <tr>
-                  <td>森田 ひかり</td>
-                  <td>09:05</td>
-                  <td>18:05</td>
-                  <td>+60分</td>
-                  <td>延長</td>
-                </tr>
-              </tbody>
-            </table>
+          <p class="subtitle">SenSei/EnCho共通のアカウントで安全にアクセスします。</p>
+          <ul class="card-list">
+            <li>部署・園ごとの権限を自動で適用</li>
+            <li>二要素認証でセキュリティを強化</li>
+            <li>利用履歴をログイン監査へ同期</li>
+          </ul>
+          <button type="button">ログイン状況を確認</button>
+        </article>
+
+        <article class="card accent">
+          <div class="card-header">
+            <h2>認証コード生成</h2>
+            <span class="tag">即時発行</span>
           </div>
-          <div class="panel">
-            <h3>サマリー</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>クラス</th>
-                  <th>在園日数</th>
-                  <th>延長人数</th>
-                  <th>区分変更</th>
-                  <th>メモ</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>さくら組</td>
-                  <td>18日</td>
-                  <td>6名</td>
-                  <td>1件</td>
-                  <td>要確認</td>
-                </tr>
-                <tr>
-                  <td>ひまわり組</td>
-                  <td>17日</td>
-                  <td>4名</td>
-                  <td>0件</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>
+          <p class="subtitle">SMSまたはメールからワンタイムコードを発行できます。</p>
+          <form class="mini-form">
+            <label>
+              <span>通知先</span>
+              <input type="text" placeholder="teacher@example.jp" />
+            </label>
+            <label>
+              <span>送信方法</span>
+              <select>
+                <option>メール</option>
+                <option>SMS</option>
+                <option>認証アプリ</option>
+              </select>
+            </label>
+            <button class="primary" type="button">認証コードを生成</button>
+          </form>
+          <p class="note">コードは60秒で更新され、履歴は監査ログに記録されます。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <h2>ログインID登録</h2>
+            <span class="tag">新規申請</span>
           </div>
-        </div>
+          <p class="subtitle">初回利用者向けにログインIDの登録依頼を送れます。</p>
+          <form class="mini-form">
+            <label>
+              <span>氏名</span>
+              <input type="text" placeholder="山田 花" />
+            </label>
+            <label>
+              <span>所属</span>
+              <input type="text" placeholder="さくら保育園 / 園長" />
+            </label>
+            <label>
+              <span>連絡先メール</span>
+              <input type="email" placeholder="yamada@example.jp" />
+            </label>
+            <button type="button">ログインIDを申請</button>
+          </form>
+          <p class="note">管理者の承認後にSenSei/EnCho共通IDが発行されます。</p>
+        </article>
       </section>
     </main>
+
+    <footer class="footer">
+      <p>SenSei / EnCho 認証基盤 | サポート: support@sensei.example.jp</p>
+    </footer>
   </body>
 </html>
