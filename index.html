@@ -3,22 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EnCho UI モック</title>
+    <title>EnCho 運用ダッシュボード</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="layer header-layer">
-      <div>
+      <div class="header-title">
+        <div class="status-pill">本番環境</div>
         <h1>EnCho 運用ダッシュボード</h1>
-        <p class="subtitle">バージョン: 2.4.1 / ログインユーザー: 佐藤みゆき</p>
+        <p class="subtitle">バージョン: 2.4.1 / ログインユーザー: 佐藤みゆき（法人管理者）</p>
       </div>
       <nav class="header-actions">
         <button type="button">トップページ</button>
-        <button type="button">ログイン</button>
+        <button type="button">ログアウト</button>
       </nav>
     </header>
 
     <main>
+      <section class="layer auth-layer">
+        <div class="auth-summary">
+          <div>
+            <h2>ログイン</h2>
+            <p class="subtitle">SenSei/EnCho共通アカウントで本番環境に接続します。</p>
+          </div>
+          <div class="badge-row">
+            <span class="badge">SAML/ID連携</span>
+            <span class="badge">二要素認証</span>
+          </div>
+        </div>
+        <form class="auth-form">
+          <label>
+            <span>ユーザーID</span>
+            <input type="text" name="userId" placeholder="employee@example.jp" />
+          </label>
+          <label>
+            <span>パスワード</span>
+            <input type="password" name="password" placeholder="••••••••" />
+          </label>
+          <label>
+            <span>認証コード</span>
+            <input type="text" name="otp" placeholder="000000" />
+          </label>
+          <button class="primary" type="button">本番環境へログイン</button>
+        </form>
+        <p class="note">ログインフローは既存のSenSei/EnChoと同様の仕組みで構成しています。</p>
+      </section>
+
       <section class="layer middle-layer">
         <h2>ミドルレイヤー</h2>
         <div class="middle-panels">
