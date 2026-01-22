@@ -17,7 +17,8 @@
         </p>
         <div class="hero-badges">
           <span class="badge">SAML/SSO</span>
-          <span class="badge">二要素認証</span>
+          <span class="badge">メール認証</span>
+          <span class="badge">ワンタイムパスワード</span>
           <span class="badge">管理者承認</span>
         </div>
       </div>
@@ -29,6 +30,14 @@
           </div>
           <span class="status">現在: 稼働中</span>
         </div>
+        <div class="auth-settings">
+          <p class="label">認証方式</p>
+          <div class="auth-pills">
+            <span class="auth-pill enabled">メール認証: 有効</span>
+            <span class="auth-pill enabled">ワンタイムパスワード: 有効</span>
+          </div>
+          <p class="auth-note">メール検証後にワンタイムパスワードを要求します。</p>
+        </div>
         <form class="login-form">
           <label>
             <span>ログインID</span>
@@ -39,7 +48,11 @@
             <input type="password" name="password" placeholder="••••••••" />
           </label>
           <label>
-            <span>認証コード</span>
+            <span>メール認証コード</span>
+            <input type="text" name="emailCode" placeholder="Emailに届いた6桁コード" />
+          </label>
+          <label>
+            <span>ワンタイムパスワード</span>
             <input type="text" name="otp" placeholder="000000" />
           </label>
           <button class="primary" type="button">EnChoにログイン</button>
@@ -61,7 +74,7 @@
           <p class="subtitle">SenSei/EnCho共通のアカウントで安全にアクセスします。</p>
           <ul class="card-list">
             <li>部署・園ごとの権限を自動で適用</li>
-            <li>二要素認証でセキュリティを強化</li>
+            <li>メール認証とワンタイムパスワードを必須化</li>
             <li>利用履歴をログイン監査へ同期</li>
           </ul>
           <button type="button">ログイン状況を確認</button>
@@ -72,7 +85,7 @@
             <h2>認証コード生成</h2>
             <span class="tag">即時発行</span>
           </div>
-          <p class="subtitle">SMSまたはメールからワンタイムコードを発行できます。</p>
+          <p class="subtitle">メール認証・ワンタイムパスワードを即時に発行できます。</p>
           <form class="mini-form">
             <label>
               <span>通知先</span>
