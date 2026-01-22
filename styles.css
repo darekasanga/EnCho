@@ -274,6 +274,12 @@ button.ghost:hover {
   line-height: 1.5;
 }
 
+.status-note {
+  font-size: 13px;
+  color: #0f766e;
+  font-weight: 600;
+}
+
 .footer {
   margin-top: 32px;
   text-align: center;
