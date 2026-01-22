@@ -82,6 +82,39 @@ p {
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
 }
 
+.auth-settings {
+  display: grid;
+  gap: 10px;
+}
+
+.auth-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.auth-pill {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #e2e8f0;
+  background: rgba(148, 163, 184, 0.12);
+  font-weight: 600;
+}
+
+.auth-pill.enabled {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.5);
+  background: rgba(16, 185, 129, 0.18);
+}
+
+.auth-note {
+  font-size: 12px;
+  color: #cbd5f5;
+  line-height: 1.5;
+}
+
 .hero-card-header {
   display: flex;
   justify-content: space-between;
